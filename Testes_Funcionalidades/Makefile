@@ -1,4 +1,4 @@
-all:eofilesize logidxreader2 logidxreader alarmes inatividade
+all:eofilesize logidxreader2 logidxreader alarmes inatividade ftemporario
 
 eofilesize:eofilesize.c
 	gcc -Wall -g -o eofilesize eofilesize.c
@@ -15,7 +15,9 @@ alarmes:alarmes.c
 inatividade:tempoinatividade.c
 	gcc -Wall -g -o inatividade tempoinatividade.c
 
+ftemporario:ficheirotemporario.c
+	gcc -Wall -g -o ftemporario ficheirotemporario.c
 
 
 clean:
-	rm -f eofilesize logidxreader logidxreader2 alarmes inatividade
+	rm -f eofilesize logidxreader logidxreader2 alarmes inatividade ftemporario
